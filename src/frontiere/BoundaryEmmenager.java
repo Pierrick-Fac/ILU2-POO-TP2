@@ -42,8 +42,8 @@ public class BoundaryEmmenager {
 	private void emmenagerDruide(String nomVisiteur) {
 		System.out.println("Bienvenue druide "+ nomVisiteur +" !!!\n");
 		int force = Clavier.entrerEntier("Quelle est votre force ?\n");
-		int effetPotionMax = Clavier.entrerEntier("Quelle est la force de potion la plus forte que vous produisiez ?:\n"); 
 		int effetPotionMin = Clavier.entrerEntier("Quelle est la force de potion la plus faible que vous produisiez ?\n");
+		int effetPotionMax = Clavier.entrerEntier("Quelle est la force de potion la plus forte que vous produisiez ?:\n"); 
 		while(effetPotionMax < effetPotionMin) {
 			if (effetPotionMax<effetPotionMin) {
 				System.out.println("Attention Druide, vous vous êtes trompé entre le minimum et le maximum\n");
