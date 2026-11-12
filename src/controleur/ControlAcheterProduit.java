@@ -24,7 +24,7 @@ public class ControlAcheterProduit {
 		return village.rechercherVendeursProduit(produit);
 	}
 	
-	public int acheterVendeur(String nomVendeur, int quantite) {
+	public int acheterProduit(String nomVendeur, int quantite) {
 		return controlTrouverEtalVendeur.trouverEtalVendeur(nomVendeur).acheterProduit(quantite);
 	}
 }

@@ -1,5 +1,6 @@
 package controleur;
 
+import personnages.Gaulois;
 import villagegaulois.Village;
 
 public class ControlPrendreEtal {
@@ -18,8 +19,12 @@ public class ControlPrendreEtal {
 
 	public int prendreEtal(String nomVendeur, String produit, int nbProduit) {
 		int numeroEtal = -1;
-		numeroEtal = village.installerVendeur(village.trouverHabitant(nomVendeur), produit, nbProduit);
-		return numeroEtal;
+		Gaulois vendeur = village.trouverHabitant(nomVendeur);
+		if (vendeur != null) {
+			numeroEtal = village.installerVendeur(vendeur, produit, nbProduit);
+		}
+		
+		return numeroEtal+1;
 	}
 
 	public boolean verifierIdentite(String nomVendeur) {
